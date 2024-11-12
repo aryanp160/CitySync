@@ -1,0 +1,166 @@
+/* Ensure the body and html have height: 100% so sticky works correctly */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  font-size: 1.3em;
+  position: sticky; /* Make the navbar sticky */
+  top: 0;           /* Stick it to the top of the page */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;  /* Transparent by default */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  padding-bottom: 1%;
+  width: 100%;       /* Ensure navbar spans the full width */
+  box-sizing: border-box;
+  background-color: #fff; 
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #9676d1; /* Lilac color */
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(177, 156, 217, 0.3); /* Lilac shadow */
+}
+
+/* Hover effect for regular nav links */
+.nav-links a:hover {
+  color: #3f2c66;
+  background-color: #e6d7f5; /* Lighter lilac shade */
+  box-shadow: 0 6px 12px rgba(177, 156, 217, 0.2); /* Softer lilac shadow */
+}
+
+.navbar-brand01 {
+  color: #9fe0f3; /* Lilac color */
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.navbar-brand02 {
+  color: #ceb3ff; /* Lilac color */
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-icon .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #9676d1;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    display: none; /* Hide links by default */
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .navbar-brand01, .navbar-brand02 {
+    font-size: 2em; /* Slightly smaller font on medium screens */
+  }
+
+  .nav-links a {
+    font-size: 1.3em; /* Adjust font size for smaller screens */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .hamburger-icon {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .hamburger-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+
+  .hamburger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-brand01, .navbar-brand02 {
+    font-size: 1.8em; /* Smaller font for smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 1.2em; /* Smaller font size */
+    padding: 8px 16px; /* Smaller padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px; /* Less padding for small screens */
+  }
+
+  .nav-links a {
+    font-size: 1.1em; /* Further adjust font size */
+    padding: 6px 14px; /* Further reduce padding */
+  }
+
+  .navbar-brand01, .navbar-brand02 {
+    font-size: 1.6em; /* Even smaller font for very small screens */
+  }
+}

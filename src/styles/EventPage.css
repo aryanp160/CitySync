@@ -1,0 +1,268 @@
+/* src/styles/EventPage.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling across the whole page */
+}
+
+.event-detail-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fdfbfd; /* Light background for better contrast */
+  overflow-x: hidden; /* Remove horizontal scrollbar */
+}
+
+.event-info {
+  flex: 2;
+  margin-right: 30px;
+}
+
+.event-tile {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-title {
+  font-size: 2.5em;
+  color: #333;
+  font-weight: bold;
+}
+
+.event-date
+ {
+  padding-top: 20px;
+  font-size: 1.5em; /* Increase font size */
+  color: #666;
+  line-height: 1.6; /* Adjust line height for readability */
+  margin: 10px 0; /* Optional: Add space between these elements */
+}
+.event-location,
+.event-details {
+  padding-top: 20px;
+  font-size: 1.5em; /* Increase font size */
+  color: #666;
+  line-height: 1.6; /* Adjust line height for readability */
+  margin: 10px 0; /* Optional: Add space between these elements */
+
+}
+.event-details {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.rsvp-section,
+.event-actions,
+.attendee-count {
+  margin-top: 20px;
+}
+.attendee-count {
+  padding-top: 10px;
+}
+.button-rsvp,
+.button-edit,
+.button-submit-comment {
+  background-color: #007BFF; /* Soft blue */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  width: 230px;
+}
+
+.button-delete {
+  background-color: red;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.button-delete:hover {
+  background-color: darkred;
+}
+.button-rsvp:hover,
+.button-edit:hover,
+.button-submit-comment:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button-rsvp:disabled,
+.button-delete:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.comment-section {
+  flex: 1;
+  background-color: #f8f9fa; /* Softer background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-header {
+  background-color: #e9ecef; /* Light background for better contrast */
+  padding: 10px 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+.comment {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-name {
+  font-size: 1em;
+  color: #6c757d;
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+
+.comment-text {
+  font-size: 1em;
+  color: #343a40;
+  line-height: 1.5;
+  padding-left:12px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.add-comment {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 100%;
+  border-top: 2px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-comment input {
+  width: 80%; /* Increased input width */
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.add-comment button {
+  padding: 12px 20px;
+  font-size: 1em;
+  background-color: #28a745; /* Green for submit */
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.delete-comment-btn {
+  background-color: #dc3545; /* Red for delete */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end; /* Align delete button to the right */
+}
+
+.delete-comment-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+
+h3 {
+  align-self: center;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+
+
+.rsvp-section input {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px; /* Space between input and button */
+  margin-top: 15px;
+}
+
+.rsvp-section input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1em;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-section input:focus {
+  border-color: #007BFF; /* Blue border on focus */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Softer shadow */
+}
+@media (max-width: 768px) {
+  .event-detail-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .event-info {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .comment-section {
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-detail-container {
+    padding: 10px;
+  }
+
+  .add-comment input {
+    width: 100%; /* Full width for input on small screens */
+  }
+}
+
+

@@ -1,0 +1,124 @@
+/* Edit Event Page Styling */
+.edit-event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.edit-event-container h2 {
+  font-size: 2.5em;
+  color: #b19cd9; /* Lilac Color */
+  margin-bottom: 20px;
+}
+
+.edit-event-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-event-form label {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.edit-event-form input,
+.edit-event-form textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+}
+
+.edit-event-form input[type="file"] {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.edit-event-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.edit-event-form button.button-save {
+  background-color: #b19cd9; /* Lilac Color */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.edit-event-form button.button-save:hover {
+  background-color: #9a7cbf; /* Darker lilac for hover */
+}
+
+.edit-event-form input:focus,
+.edit-event-form textarea:focus {
+  border-color: #b19cd9; /* Lilac border focus */
+  outline: none;
+}
+
+.edit-event-form input::placeholder,
+.edit-event-form textarea::placeholder {
+  color: #aaa;
+}
+
+
+@media (max-width: 768px) {
+  .edit-event-container {
+    padding: 15px;
+  }
+
+  .edit-event-container h2 {
+    font-size: 2em; /* Reduce heading size for smaller screens */
+  }
+
+  .edit-event-form {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .edit-event-form label {
+    font-size: 1em; /* Adjust label font size slightly */
+  }
+
+  .edit-event-form input,
+  .edit-event-form textarea,
+  .edit-event-form button.button-save {
+    font-size: 0.9em; /* Reduce font size for inputs and button */
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-event-container {
+    padding: 10px;
+  }
+
+  .edit-event-container h2 {
+    font-size: 1.8em; /* Further reduce heading size for extra small screens */
+  }
+
+  .edit-event-form {
+    padding: 15px; /* Further reduce padding */
+  }
+  
+  .edit-event-form input,
+  .edit-event-form textarea,
+  .edit-event-form button.button-save {
+    padding: 10px; /* Adjust padding for inputs and button */
+  }
+}

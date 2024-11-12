@@ -1,0 +1,160 @@
+/* src/styles/HomePage.css */
+
+/* Ensure body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* The main container */
+.main-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;  /* Horizontally center the content */
+  align-items: center;      /* Vertically center the content */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 100%;
+  max-width: 400px; /* Limit max width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Filter Section Styling */
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Spacing between elements */
+  margin-bottom: 4%;
+  padding: 12px;
+  background-image: linear-gradient(#9fe0f3, #ceb3ff );
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  padding-right: 10px;
+}
+
+/* Dropdown and Input Styling */
+.select, .input {
+  padding: 12px 15px; /* Ensures height consistency */
+  font-size: 0.9rem;
+  width: 220px; /* Width consistency */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: #333;
+  background-color: #fafafa;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.select:hover, .input:hover {
+  border-color: #007bff; /* Hover effect */
+}
+
+.select {
+  background-color: #fafafa;
+  cursor: pointer;
+  width: 200px;
+}
+
+.input {
+  width: 200px;
+  background-color: #fafafa;
+}
+
+/* Event Tiles */
+.events-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Prevent overlap */
+  padding: 20px;
+}
+
+.event-tile {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+  box-sizing: border-box; /* Ensure padding is included */
+  width: 100%; /* Tile fills the cell */
+}
+
+.event-tile:hover {
+  transform: scale(1.02);
+}
+
+/* Event title styling */
+.event-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Event location and date as subheading */
+.event-subtitle {
+  font-size: 1.1em;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Preview of event description */
+.event-preview {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Button styling */
+.button-view-details {
+  background-color: #cf8ccf; /* Lilac color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-view-details:hover {
+  background-color: #b456b4; /* Darker lilac on hover */
+  transform: translateY(-2px); /* Hover lift */
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* For devices smaller than 768px */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .select, .input {
+    width: 100%; /* Full width */
+  }
+}
+
+/* For devices smaller than 480px (very small screens) */
+@media (max-width: 480px) {
+  .events-grid {
+    grid-template-columns: 1fr; /* One column layout on small screens */
+  }
+}

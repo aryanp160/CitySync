@@ -1,0 +1,101 @@
+.contact-page {
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f9f7fc; /* Light background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-page h2 {
+  font-size: 3em;
+  color: #6a4c9c; /* Lilac color */
+  margin-bottom: 40px;
+}
+
+.team-members-container {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: row; /* Align team members horizontally */
+  justify-content: center; /* Center team members horizontally */
+  gap: 80px; /* Add space between team members */
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 250px; /* Set a maximum width for each team member */
+}
+
+.team-member h3 {
+  font-size: 2.2em;
+  color: #6a4c9c; /* Lilac color */
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 40px; /* Add space between the icons */
+  flex-wrap: wrap; /* Allow icons to wrap if the screen is smaller */
+  margin-top: 15px;
+}
+
+.social-icon {
+  font-size: 2.5em; /* Larger icon size */
+  color: #6a4c9c; /* Lilac color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge icons on hover */
+  color: #9c7ac8; /* Darker shade of Lilac on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-page h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+
+  .team-members-container {
+    flex-direction: column; /* Stack team members vertically */
+    gap: 40px; /* Reduce gap between team members */
+  }
+
+  .team-member h3 {
+    font-size: 1.8em; /* Slightly smaller heading */
+  }
+
+  .social-links {
+    gap: 30px; /* Reduce space between social icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .team-members-container {
+    gap: 30px; /* Reduce space further between team members */
+  }
+
+  .team-member h3 {
+    font-size: 1.6em; /* Even smaller heading for very small screens */
+  }
+
+  .social-links {
+    gap: 20px; /* Further reduce gap for mobile */
+  }
+
+  .social-icon {
+    font-size: 2em; /* Smaller icons on very small screens */
+  }
+}

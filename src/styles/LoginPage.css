@@ -1,0 +1,117 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px; /* Add padding for smaller screens */
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+}
+
+.login-box h2 {
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.login-box button, .login-box input {
+  width: 100%; /* Ensure input and button are the same width */
+  box-sizing: border-box; /* Prevent padding from affecting overall width */
+}
+
+.login-box button {
+  padding: 12px;
+  background-color: #C8A2C8; /* Lilac color */
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #b494b4; /* Darker lilac on hover */
+}
+
+.login-box p {
+  margin-top: 15px;
+  color: #666666;
+}
+
+.login-box a {
+  color: #C8A2C8; /* Lilac color for link */
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.web .c {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: #9fe0f3;
+}
+
+.web .s {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: #ceb3ff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 20px; /* Reduce padding on smaller screens */
+    margin: 20px; /* Add margin for spacing */
+  }
+
+  .login-box h2 {
+    font-size: 22px; /* Slightly reduce font size for smaller screens */
+  }
+
+  .web .c, .web .s {
+    font-size: 2em; /* Reduce font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 15px; /* Further reduce padding for small screens */
+    margin: 15px; /* Add margin for spacing */
+  }
+
+  .login-box h2 {
+    font-size: 20px; /* Further reduce font size for smaller devices */
+  }
+
+  .login-box input, .login-box button {
+    font-size: 14px; /* Reduce input and button font size */
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  .web .c, .web .s {
+    font-size: 1.8em; /* Further reduce font size */
+  }
+}

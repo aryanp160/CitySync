@@ -1,0 +1,99 @@
+/* src/styles/GlobalStyles.css */
+
+/* Base Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Container Styles */
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-size: 2em;
+    color: #4a4a4a;
+  }
+  
+  .header button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .header button:hover {
+    background-color: #ff3b3b;
+  }
+  
+  /* Button Styles */
+  .button-primary {
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .button-primary:hover {
+    background-color: #357abd;
+  }
+  
+  /* Input and Select Styles */
+  .input,
+  .select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .card .card-info {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
